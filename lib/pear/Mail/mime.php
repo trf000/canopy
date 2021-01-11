@@ -912,7 +912,7 @@ class Mail_mime
     {
         
         $build_params = $this->_build_params;
-        while (list($key, $value) = each($params)) {
+         foreach($params as $key => $value) {
             $build_params[$key] = $value;
         }
         //$hdr_name: Name of the heaer
@@ -1086,7 +1086,7 @@ class Mail_mime
     {
         $this->_eol = $eol;
         if (!defined('MAIL_MIME_CRLF')) {
-            define('MAIL_MIME_CRLF', $this->_eol, true);
+            define('MAIL_MIME_CRLF', $this->_eol);
         }
     }
 
