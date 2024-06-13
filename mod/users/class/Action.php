@@ -524,7 +524,7 @@ class User_Action
     public static function sendMessage($message, $command)
     {
         $_SESSION['User_Admin_Message'] = $message;
-        \phpws\PHPWS_Core::reroute('index.php?module=users&action=admin&command=?'
+        \phpws\PHPWS_Core::reroute('index.php?module=users&action=admin&command='
                 . $command . '&authkey=' . Current_User::getAuthKey());
     }
 
